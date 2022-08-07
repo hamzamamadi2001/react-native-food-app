@@ -16,28 +16,22 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
- 
-import{SafeAreaProvider}from 'react-native-safe-area-context'
+import Bottom_tab from "./src/navigator/bottom-tab/bottom_tab_entier_app"
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+ 
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-     <Text>fdsafds</Text>
-    </SafeAreaView>
+    <NavigationContainer>
+
+   
+   <Bottom_tab></Bottom_tab>
+   
+    </NavigationContainer>
+
   );
 };
 
