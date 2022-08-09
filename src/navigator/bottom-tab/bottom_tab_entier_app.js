@@ -2,7 +2,7 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../stack/home_stack';
-import SittingScreen from '../stack/sitting_stack';
+import SittingScreen from '../stack/profile_stack';
 import Bage from '../../screens/bage';
 import Profile from '../../screens/profile';
 import favoraite from '../../screens/favorite'
@@ -17,6 +17,7 @@ const BottomTabEntierApp = () => {
         <Tab.Navigator
        
         tabBar={props=><Bottom_tap_nav {...props}></Bottom_tap_nav>}
+    
         > 
         
          
@@ -24,12 +25,12 @@ const BottomTabEntierApp = () => {
         
    
         <Tab.Screen    name="Home"         
- component={HomeScreen}  options={{tabBarLabel: 'Home', unmountOnBlur: true, 
+ component={HomeScreen}  options={{tabBarLabel: 'Home', unmountOnBlur: true, headerShown:false,
  tabBarIcon: {icon:(isFocused)=>{if(isFocused) return(<Icon name="home-outline" size={24}  color="#f66"/> ); else  return (<Icon name="home" size={24}  color="gray" />)}}}} />
 
 
 <Tab.Screen logo="Profile"   name="Sittings"         
- component={SittingScreen}  options={{tabBarLabel: 'Favorite', unmountOnBlur: true, 
+ component={SittingScreen}  options={{tabBarLabel: 'Favorite', unmountOnBlur: true,  headerShown:false,
  tabBarIcon: {icon:(isFocused)=>{if(isFocused) return(<Icon name="person-outline" size={24}  color="#f66"/> ); else  return (<Icon name="person" size={24}  color="gray" />)}}}} />
 
 
