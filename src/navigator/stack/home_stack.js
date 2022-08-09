@@ -6,7 +6,7 @@ import Home from "../../screens/home";
    
   return (
     <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} ></Stack.Screen>
+        <Stack.Screen name="firstScreen" component={Home} ></Stack.Screen>
     </Stack.Navigator>
   )
 }
